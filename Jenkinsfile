@@ -6,9 +6,11 @@ pipeline {
 
   }
   stages {
-    stage('build') {
+    stage('test') {
       steps {
         echo 'hello'
+        sh '''dotnet restore /MyXunitProject.csproj
+dotnet test /MyXunitProject.csproj'''
       }
     }
   }
