@@ -9,8 +9,8 @@ pipeline {
     stage('test') {
       steps {
         echo 'hello'
-        sh '''dotnet restore /MyXunitProject.csproj
-dotnet test /MyXunitProject.csproj'''
+        dotnet restore ./MyXunitProject.csproj
+        dotnet test ./MyXunitProject.csproj
       }
     }
   }
