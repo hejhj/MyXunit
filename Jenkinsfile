@@ -1,12 +1,10 @@
 pipeline {
-  agent {
-    docker {
-            image 'openshift/dotnet'
-        }
+  agent any
   }
   stages {
     stage('test') {
       steps {
+        sh 'build.sh'
         sh 'dotnet restore ./MyXunitProject.csproj'
         sh 'dotnet test ./MyXunitProject.csproj'
       }
