@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        bat 'dotnet restore ./MyXunitProject.csproj'
-        bat 'dotnet test ./MyXunitProject.csproj'
+        sh 'dotnet restore ./MyXunitProject.csproj'
+        sh 'dotnet test ./MyXunitProject.csproj'
       }
     }
   }
