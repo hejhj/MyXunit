@@ -1,5 +1,9 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+            image 'openshift/dotnet'
+        }
+  }
   stages {
     stage('test') {
       steps {
