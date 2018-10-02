@@ -4,9 +4,9 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'build.sh'
-        sh 'dotnet restore ./MyXunitProject.csproj'
-        sh 'dotnet test ./MyXunitProject.csproj'
+        sh 'runtest.sh'
+        //sh 'dotnet restore ./MyXunitProject.csproj'
+        //sh 'dotnet test ./MyXunitProject.csproj'
       }
     }
   }
