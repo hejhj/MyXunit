@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    docker {image: 'dotnet-20-rhel7:latest'}
+    docker {image 'dotnet-20-rhel7:latest'}
   }
   stages {
     stage('test') {
